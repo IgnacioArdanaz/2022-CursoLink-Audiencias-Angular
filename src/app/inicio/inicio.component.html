@@ -1,0 +1,325 @@
+<div class="shortcuts">
+    <div class="shortcuts-content">
+        <div class="shortcuts-column shortcuts-dependencies">
+          <a href="https://audiencias.mininterior.gob.ar/navegar/pen">
+              <div class="shortcuts-title">Estructura del <br> Poder Ejecutivo Nacional</div>
+          </a>
+          <div class="shortcuts-table">
+              <a *ngFor="let estructura of estructuraDelPoderEjecutivoNacional" href="https://audiencias.mininterior.gob.ar/buscar?pen={{estructura.idBusqueda}}" > <!-- ngFor → directiva de angular -->
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      {{ estructura.nombre }}
+                    </div>
+                    <div class="shortcut-value">
+                      {{ estructura.id }}
+                    </div>
+                </div>
+              </a>
+              <!-- <a href="https://audiencias.mininterior.gob.ar/buscar?pen=3132">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Ministerio de Educación
+                    </div>
+                    <div class="shortcut-value">
+                      559
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?pen=3156">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Ministerio de Desarrollo Territorial y Hábitat
+                    </div>
+                    <div class="shortcut-value">
+                      519
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?pen=315">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Jefatura de Gabinete de Ministros
+                    </div>
+                    <div class="shortcut-value">
+                      437
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?pen=3157">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Ministerio de Obras Públicas
+                    </div>
+                    <div class="shortcut-value">
+                      434
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?pen=3425">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Vicepresidencia, Instituto Nacional de Cine y Artes Visuales (INCAA), Ministerio de Cultura
+                    </div>
+                    <div class="shortcut-value">
+                      433
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?pen=384">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Ministerio de Energía y Minería
+                    </div>
+                    <div class="shortcut-value">
+                      391
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?pen=196">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Ministerio de Justicia y Derechos Humanos
+                    </div>
+                    <div class="shortcut-value">
+                      355
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?pen=2134">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      ANMAT, Secretaría de Gobierno de Salud, Ministerio de Salud y Desarrollo Social
+                    </div>
+                    <div class="shortcut-value">
+                      354
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?pen=265">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Ministerio de Seguridad
+                    </div>
+                    <div class="shortcut-value">
+                      323
+                    </div>
+                </div>
+              </a> -->
+          </div>
+        </div>
+        <div class="shortcuts-column shortcuts-obligees">
+          <a href="https://audiencias.mininterior.gob.ar/navegar/sujetos_obligados">
+              <div class="shortcuts-title">Quiénes <br> concedieron audiencias</div>
+          </a>
+          <div class="shortcuts-table">
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Mauricio%20Macri">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Mauricio Macri
+                    </div>
+                    <div class="shortcut-value">
+                      695
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Chiale,%20Carlos%20Alberto">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Chiale, Carlos Alberto
+                    </div>
+                    <div class="shortcut-value">
+                      647
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Fern%C3%A1ndez,%20Alberto%20%C3%81ngel">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Fernández, Alberto Ángel
+                    </div>
+                    <div class="shortcut-value">
+                      484
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Trotta,%20Nicol%C3%A1s">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Trotta, Nicolás
+                    </div>
+                    <div class="shortcut-value">
+                      449
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Katopodis,%20Gabriel%20Nicol%C3%A1s">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Katopodis, Gabriel Nicolás
+                    </div>
+                    <div class="shortcut-value">
+                      434
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Batlle,%20Nicol%C3%A1s%20Daniel">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Batlle, Nicolás Daniel
+                    </div>
+                    <div class="shortcut-value">
+                      433
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Ferraresi,%20Jorge%20Horacio">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Ferraresi, Jorge Horacio
+                    </div>
+                    <div class="shortcut-value">
+                      413
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Aranguren,%20Juan%20Jos%C3%A9">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Aranguren, Juan José
+                    </div>
+                    <div class="shortcut-value">
+                      391
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Delfino,%20Lucas%20Santiago">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Delfino, Lucas Santiago
+                    </div>
+                    <div class="shortcut-value">
+                      380
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Lopetegui,%20Gustavo%20Sebasti%C3%A1n">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Lopetegui, Gustavo Sebastián
+                    </div>
+                    <div class="shortcut-value">
+                      313
+                    </div>
+                </div>
+              </a>
+          </div>
+        </div>
+        <div class="shortcuts-column shortcuts-applicants">
+          <a href="https://audiencias.mininterior.gob.ar/navegar/solicitantes_de_audiencias">
+              <div class="shortcuts-title">Quiénes <br> solicitaron audiencias</div>
+          </a>
+          <div class="shortcuts-table">
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=De%20Andreis,%20Fernando">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      De Andreis, Fernando
+                    </div>
+                    <div class="shortcut-value">
+                      289
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Capitanich%20Jorge%20Milton">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Capitanich Jorge Milton
+                    </div>
+                    <div class="shortcut-value">
+                      85
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Vitobello,%20Julio%20Fernando">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Vitobello, Julio Fernando
+                    </div>
+                    <div class="shortcut-value">
+                      70
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Gutierrez%20Omar">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Gutierrez Omar
+                    </div>
+                    <div class="shortcut-value">
+                      68
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Manzur%20Juan%20Luis">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Manzur Juan Luis
+                    </div>
+                    <div class="shortcut-value">
+                      61
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Juarez%20Miriam%20Patricia">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Juarez Miriam Patricia
+                    </div>
+                    <div class="shortcut-value">
+                      58
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Faurie,%20Jorge%20Marcelo">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Faurie, Jorge Marcelo
+                    </div>
+                    <div class="shortcut-value">
+                      58
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=U%C3%91ac%20Sergio%20Mauricio">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      UÑac Sergio Mauricio
+                    </div>
+                    <div class="shortcut-value">
+                      54
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Gioseffi,%20Gustavo">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Gioseffi, Gustavo
+                    </div>
+                    <div class="shortcut-value">
+                      50
+                    </div>
+                </div>
+              </a>
+              <a href="https://audiencias.mininterior.gob.ar/buscar?q=Ruberto%20Saenz%20Gustavo%20Adolfo">
+                <div class="shortcut-row">
+                    <div class="shortcut-name ellipsis">
+                      Ruberto Saenz Gustavo Adolfo
+                    </div>
+                    <div class="shortcut-value">
+                      48
+                    </div>
+                </div>
+              </a>
+          </div>
+        </div>
+    </div>
+  </div>

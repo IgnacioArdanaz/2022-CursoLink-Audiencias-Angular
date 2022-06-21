@@ -1,0 +1,82 @@
+<div *ngIf="estaVisible" class="search-content"> <!-- ngif entiende expresiones o variable boleanas. Si da false ni siquiera renderiza, no es que te lo pone en none. Es mas performante hacer referencia a un atributo que a un metodo, xq si es un método angular va a estar preguntando constantemente el retorno del metodo, mientras que si es una variable, como angular tiene un detector de cambios, solo se evalua cndo cambia el valor del atributo-->
+  <div class="search-title">
+     Registro Único de Audiencias<br>de Gestión de Intereses
+  </div>
+  <div class="search-form">
+     <div class="search-input">
+        <input type="text" id="search-text" placeholder="Buscar por funcionarios, dependencias, participantes de audiencias" [(ngModel)]="busqueda" [ngModelOptions]="{standalone: true}"> <!-- [()] es doble bindeo de datos → si alguin ingresa algo, se va a ver reflejado en la lase, lo mismo en la otra direccion.  Ese standalone: true significa que este input no pertenece a ningun formulario en particular, si no lo ponemos angular rompe porque espera que esté dentro de uno. [] → bindeo de datos solamente de lectura, me traigo de valores de algunos lado, me permite escribir algunas propiedades de la etiqueta o escribir codigo js y que lo interprete correctamente -->
+        <a (click)="buscar()" ><button class="green" id="submit-search">BUSCAR</button></a> <!-- Binding de cosas → enlazar clases de angular con el dom. Ej: interpolación (unidireccional, xq si cambio el valor del dos no se me actualiza en la clase). Con ese click, definimos q cada vez que se de el evento, quiero llamar a las clase (atributo o metodo) -->
+     </div>
+     <div class="advance-search-container">
+        <input type="checkbox" id="show-advance-search">
+        <label class="show-advance-search-label" for="show-advance-search">
+        <img src="assets/images/icon-marcador-derecha-blanco.svg" class="advance-search-icon">
+        Personalizá tu búsqueda
+        </label>
+        <div class="advance-search">
+           <div class="search-option">
+              <div class="search-description">
+                 Rango de fechas
+              </div>
+              <input type="text" id="date-from" placeholder="Desde" class="date-input">
+              <input type="text" id="date-to" placeholder="Hasta" class="date-input">
+           </div>
+           <div class="search-option">
+              <div class="search-description">
+                 Buscar solo por:
+              </div>
+              <div class="table">
+                 <div class="table-row">
+                    <div class="table-cell">
+                       <input type="checkbox" id="search-person">
+                       <label for="search-person">
+                       <img src="assets/images/icon-check-blanco.svg" class="checked">
+                       <img src="assets/images/icon-check-no-blanco.svg" class="not-checked">
+                       Personas físicas
+                       </label>
+                    </div>
+                    <div class="table-cell">
+                       <input type="checkbox" id="search-dependencies">
+                       <label for="search-dependencies">
+                       <img src="assets/images/icon-check-blanco.svg" class="checked">
+                       <img src="assets/images/icon-check-no-blanco.svg" class="not-checked">
+                       Dependencias del Poder Ejecutivo Nacional
+                       </label>
+                    </div>
+                 </div>
+                 <div class="table-row">
+                    <div class="table-cell">
+                       <input type="checkbox" id="search-representation">
+                       <label for="search-representation">
+                       <img src="assets/images/icon-check-blanco.svg" class="checked">
+                       <img src="assets/images/icon-check-no-blanco.svg" class="not-checked">
+                       Entidades públicas/privadas
+                       </label>
+                    </div>
+                    <div class="table-cell">
+                       <input type="checkbox" id="search-summary">
+                       <label for="search-summary">
+                       <img src="assets/images/icon-check-blanco.svg" class="checked">
+                       <img src="assets/images/icon-check-no-blanco.svg" class="not-checked">
+                       Motivo o síntesis de la audiencia
+                       </label>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+    <div *ngIf="resultado != null" class="total-count">
+      Se encontraron {{ resultado?.totales }} resultados <!-- ? es el modo safe, para que si es nulo no intente buscar el atributo totales -->
+      para "{{ resultado?.busqueda }}"  ({{ resultado?.horario?.datetime | date:"short"}})<!-- pipes me ayudan a mostrar las cosas-->
+      <div class="results-tabs">
+         <a href="https://audiencias.mininterior.gob.ar/buscar?pen=30">
+            <div class="result-tab selected">Sistema actual ({{ resultado?.sistemaActual }})</div>
+         </a>
+         <a href="https://audiencias.mininterior.gob.ar/buscar?pen=30&amp;historico=si">
+            <div class="result-tab ">Sistema anterior ({{ resultado?.sistemaAnterior }})</div>
+         </a>
+      </div>
+   </div>
+  </div>
+</div>

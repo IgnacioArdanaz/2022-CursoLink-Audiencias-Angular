@@ -1,0 +1,68 @@
+<div class="result-el">
+  <div class="condensed table">
+     <div class="table-row">
+        <div class="table-cell col-title bold grey">Sujeto obligado</div>
+        <div class="table-cell col-title bold grey">Solicitante</div>
+        <div class="table-cell col-title bold grey">Otros participantes (0)</div>
+        <div class="table-cell col-title bold grey">Datos audiencia</div>
+     </div>
+     <div class="table-row">
+        <div class="table-cell">
+           <p class="obligee-name bold">
+              {{ audiencia?.subjetoObligado.apellido }}, {{ audiencia?.subjetoObligado.nombre }}
+            </p>
+            <p class="obligee-country small-font">
+              {{ audiencia?.subjetoObligado.nacionalidad }}
+            </p>
+            <p class="obligee-id small-font">
+              DNI
+              {{ audiencia?.subjetoObligado.dni }}
+            </p>
+            <p class="obligee-position space-up small-font">
+             {{ audiencia?.subjetoObligado.cargo }}
+            </p>
+            <p class="obligee-dependency small-font">
+             {{ audiencia?.subjetoObligado.dependenciaEstatal }}
+            </p>
+          </div>
+          <div class="table-cell">
+            <p class="applicant-name bold">
+             {{ audiencia?.solicitante.nombreCompleto }}
+            </p>
+            <p class="applicant-position small-font">
+             {{ audiencia?.solicitante.cargo }}
+            </p>
+            <p class="applicant-country small-font space-up">
+             {{ audiencia?.solicitante.nacionalidad }}
+            </p>
+            <p class="applicant-id small-font">
+              DNI
+              {{ audiencia?.solicitante.dni }}
+           </p>
+           <p class="applicant-participation small-font">
+              El solicitante participó de la audiencia
+           </p>
+           <p class="representation-type big-space-up small-font">En representación</p>
+           <p class="representation-type small-font">{{ audiencia?.solicitante.tipoRepresentacion }}</p>
+           <p class="represented-name bold">{{ audiencia?.solicitante.entidad }}</p>
+           <p class="represented-id small-font space-up">CUIT {{ audiencia?.solicitante.cuit }}</p>
+        </div>
+        <div class="table-cell">
+        </div>
+        <div class="table-cell">
+           <div class="table-cell no-padding">
+              <p class="grey">Fecha</p>
+              <p class="small-font">{{ audiencia?.fecha }}</p>
+           </div>
+           <div class="table-cell no-padding">
+              <p class="grey">Hora</p>
+              <p class="small-font">{{ audiencia?.hora }}</p>
+           </div>
+           <p class="grey big-space-up">Interés invocado</p>
+           <p class="small-font">{{ audiencia?.tipoInteres }}</p>
+           <p class="grey big-space-up">Motivo</p>
+           <p class="small-font">{{ audiencia?.motivo }}</p>
+        </div>
+     </div>
+  </div>
+</div>

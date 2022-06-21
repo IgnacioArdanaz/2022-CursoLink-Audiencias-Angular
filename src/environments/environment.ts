@@ -2,8 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+//Aca van los valores durante el desarrollo
+
 export const environment = {
-  production: false
+  production: false,
+  apiHorarioURL: 'http://worldtimeapi.org/api/timezone/America/Argentina/Buenos_Aires'
 };
 
 /*

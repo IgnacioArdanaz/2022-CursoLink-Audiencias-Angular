@@ -2,8 +2,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "baseUrl": "./", // Desde donde puede comenzar a hacer archivos typescript
+    "outDir": "./dist/out-tsc", //Donde deja el babel los archivos transpilador
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
